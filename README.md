@@ -2,26 +2,29 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9.
 
-## Development server
+## Before starting
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. You must install [NodeJS](https://nodejs.org/en/download/)
+2. Check if npm is installed `npm -v`
+3. Install all dependencies `npm i`
 
-## Code scaffolding
+ You are ready to use the app
+ 
+## After installing
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `ng serve --open` will start the app on [localhost:4200](http://localhost:4200)
 
-## Build
+If you want to specify the port you can use --port (port: 1234)
+Run `ng serve --open --port 1234`
+ 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Rules
 
-## Running unit tests
+- When you lauch the app you need to enter your nickname to start.
+- An algorithm will generate a random word.
+- You have to discover the hidden word. 
+- Click/type a specific letter
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+If the letter is included in the hidden word it will discover be shown, otherwise we increment a counter of wrong responses.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+You win if you discover the word in 13 possibilities 

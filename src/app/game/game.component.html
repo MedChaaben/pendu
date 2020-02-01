@@ -1,0 +1,21 @@
+<div class="container text-center">
+  <div class="connection-container">
+    <div>Welcome {{nickname}}</div>
+    <button (click)="logout()" class="logout">Logout</button>
+  </div>
+  <div class="game-container">
+    <div class="hidden-word">{{ hiddenWord.join('') }}</div>
+    <div class="score text-center">{{wrongResponse}} error(s) / {{chancesTotal}} possibilities</div>
+    <div class="keyboard-container">
+      <ng-container *ngFor="let char of letters;">
+        <button (click)="choose(char)" [disabled]="keyboardDisabled[char]" class="keyboard">{{char}}</button>
+      </ng-container>
+      <button (click)="resetGame()" class="reset">Reset game</button>
+    </div>
+    <div class="message text-center">
+      <ng-container *ngIf="hiddenWord.join('') === word">You win :))</ng-container>
+      <ng-container *ngIf="wrongResponse === chancesTotal">You lose :(( the word was <b>{{word}}</b></ng-container>
+    </div>
+  </div>
+  <img src="/assets/pendu_wrong_{{wrongResponse}}.jpeg" width="400px"/>
+</div>

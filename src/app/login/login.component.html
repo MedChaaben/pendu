@@ -1,0 +1,7 @@
+<div class="container">
+  <label>Nickname:</label>
+  <input type="text" maxlength="10" [(ngModel)]="nickname">
+  <button (click)="login()" [disabled]="!(!!nickname && nickname.length > 3)">Enter</button>
+
+  <div class="info">You should type your nickname to enter (must be more than 3 letters)</div>
+</div>

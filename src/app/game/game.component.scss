@@ -1,0 +1,57 @@
+.text-center {
+  text-align: center;
+}
+
+.container {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  border: solid 4px;
+
+  .connection-container {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    button.logout {
+      line-height: 2;
+      font-weight: bold;
+      padding: 5px;
+    }
+  }
+
+  .game-container {
+    .hidden-word {
+      text-align: center;
+      font-weight: bold;
+      font-size: 50px;
+      letter-spacing: 10px;
+    }
+
+    .score, .message {
+      height: 18px;
+    }
+  }
+
+  .keyboard-container {
+    text-align: center;
+    width: 550px;
+    margin: 15px 0;
+
+    button {
+      margin: 5px;
+      line-height: 48px;
+      font-size: 18px;
+
+      &.keyboard {
+        width: 65px;
+      }
+
+      &.reset {
+        width: 142px;
+        font-weight: bold;
+      }
+    }
+  }
+}
