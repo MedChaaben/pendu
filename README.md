@@ -23,8 +23,6 @@ Run `ng serve --open --port 1234`
 - When you lauch the app you need to enter your nickname to start.
 - An algorithm will generate a random word.
 - You have to discover the hidden word. 
-- Click/type a specific letter
-
-If the letter is included in the hidden word it will discover be shown, otherwise we increment a counter of wrong responses.
+- Click/type a specific letter : If the letter is included in the hidden word it will be shown, otherwise we increment a counter of wrong responses.
 
 You win if you discover the word in 13 possibilities 
