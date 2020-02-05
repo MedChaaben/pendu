@@ -25,7 +25,7 @@ export class GameComponent implements OnInit {
   @HostListener('document:keypress', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
     const key = event.key.toUpperCase();
-    if (this.letters.indexOf(key) > -1) { // check if letter is permitted
+    if (this.letters.indexOf(key) > -1 && this.wrongResponse < this.chancesTotal) { // check if letter is permitted
       this.choose(key);
     }
   }
